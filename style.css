@@ -1,0 +1,70 @@
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+h1 {
+  color: #bbb;
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flip-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Die Karten */
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 6px;
+  width: 80px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff99;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Flip-Animation */
+.card.flip {
+  transform: rotateX(180deg);
+}
+
+/* Für kleinere Geräte */
+@media (max-width: 500px) {
+  .card {
+    width: 60px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+}
